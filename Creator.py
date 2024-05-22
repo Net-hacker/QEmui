@@ -47,7 +47,7 @@ layout = [
 ]
 
 def Creator():
-    window = sg.Window("Qemu Creator", element_justification='c').Layout(layout)
+    window = sg.Window("Qemu Creator", icon="Icon.ico", element_justification='c').Layout(layout)
     while True:
         event, values = window.read()
         if event == sg.WIN_CLOSED:
