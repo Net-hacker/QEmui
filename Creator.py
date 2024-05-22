@@ -6,16 +6,18 @@ sg.theme("DarkGrey15");
 noMedia = False
 
 def create_hda(Name, Location, Size, File_Type):
-    os.system("qemu-img create -f " + File_Type + " " + Location + "/" + Name + "." + File_Type + " " + Size)
+    os.system("qemu-img create -f " + File_Type + " '" + Location + "/" + Name + "." + File_Type + "' " + Size)
 
 def create_vm(Name, Accelorator, Location, File_Type, CPU, Cores, Memory, Media, Media_Type):
     if noMedia == False:
-        command = "qemu-system-x86_64 -accel " + Accelorator + " -cpu " + CPU + " -smp " + Cores + " -m " + Memory + " -hda " + Location + "/" + Name + "." + File_Type
-        os.system("mkdir VM && touch VM/" + Name + ".sh")
+        command = "qemu-system-x86_64 -accel " + Accelorator + " -cpu " + CPU + " -smp " + Cores + " -m " + Memory + " -hda '" + Location + "/" + Name + "." + File_Type + "' "
+        if not os.path.exists("./VM"):
+            os.system("mkdir VM")
+        os.system("touch VM/" + Name + ".sh")
         file = open("VM/" + Name + ".sh", "w")
         file.write(command + "\n")
         file.close()
-        command += " -drive file=" + Media + ",index=1,media=" + Media_Type + " -boot d"
+        command += "-drive file='" + Media + "',index=1,media=" + Media_Type + " -boot d"
         os.system(command)
 
 sizes = ['K', 'M', 'G', 'T', 'P', 'E']
