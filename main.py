@@ -15,7 +15,7 @@ def Run_VM():
         vm_list += [index]
     vm_list_bar = sg.Combo(vm_list, font=("Arial", 16), expand_x=True, enable_events=True, readonly=True, key="-VMs-")
     sublayout = [ [sg.Text("Run VM")], [vm_list_bar], [sg.Button("Run")] ]
-    subwindow = sg.Window("Run VM", element_justification='c').Layout(sublayout)
+    subwindow = sg.Window("Run VM", icon="Icon.ico", element_justification='c').Layout(sublayout)
     while True:
         event, values = subwindow.read()
         if event == sg.WINDOW_CLOSED:
@@ -33,7 +33,7 @@ layout = [
 ]
 
 def main():
-    window = sg.Window("QEmui", element_justification='c').Layout(layout)
+    window = sg.Window("QEmui", icon="Icon.ico", element_justification='c').Layout(layout)
     while True:
         event, values = window.read()
         if event == sg.WIN_CLOSED:
