@@ -1,4 +1,4 @@
-# QEmui ![Icon](https://github.com/Net-hacker/QEmui/assets/85522443/180b442e-f2e8-473d-be3e-9c1efe99cf4d)
+# QEmui
 This is a VM-Manager currently written in Python with PySimpleGUI and it uses Qemu. It's for creating and managing VMs
 
 ## Functions
@@ -19,3 +19,5 @@ This is a VM-Manager currently written in Python with PySimpleGUI and it uses Qe
 ## Support
 - You can Fork it if you want to I always like help :)
 - Open a Issue when something doesn't work and I will try to help
+
+### Made by Net-hacker
