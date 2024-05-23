@@ -3,7 +3,7 @@ This is a VM-Manager currently written in Python with PySimpleGUI and it uses Qe
 
 ## Functions
 - Making new VMs with Settings which will be saved
-- Running the saved VMs in a .sh or .bat File
+- Running the saved VMs in a ```.sh``` or ```.bat``` File
 
 ## Requirments
 - Qemu installed and added to your $PATH
